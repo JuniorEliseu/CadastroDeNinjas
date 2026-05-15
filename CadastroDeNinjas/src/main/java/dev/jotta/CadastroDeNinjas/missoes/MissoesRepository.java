@@ -1,4 +1,4 @@
-package dev.jotta.CadastroDeNinjas.Missoes;
+package dev.jotta.CadastroDeNinjas.missoes;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
