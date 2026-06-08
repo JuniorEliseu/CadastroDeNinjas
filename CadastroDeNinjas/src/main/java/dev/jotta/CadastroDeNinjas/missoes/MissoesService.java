@@ -13,7 +13,19 @@ public class MissoesService {
         this.missoesrepository = missoesrepository;
     }
 
-        public List<MissoesModel> listarMissoes() {
-            return missoesrepository.findAll();
+    public List<MissoesModel> listarMissoes() {
+        return missoesrepository.findAll();
         }
+
+    public MissoesModel criarMissao(MissoesModel missoesModel) {
+        return missoesrepository.save(missoesModel);
+    }
+
+    public MissoesModel ListarMissaoPorid ( Long id) {
+        return missoesrepository.findById(id).orElse(null);
+    }
+
+     public void deletarMissaoPorId(Long id) {
+        missoesrepository.deleteById(id);
+    }
 }

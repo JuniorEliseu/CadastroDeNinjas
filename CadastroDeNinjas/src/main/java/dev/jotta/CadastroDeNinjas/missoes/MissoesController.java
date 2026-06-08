@@ -18,14 +18,14 @@ public class MissoesController {
 
     // criar missão
     @PostMapping("/criarMissao")
-    public String criarMissao() {
-        return "Missão Criada";
+    public MissoesModel criarMissao(@RequestBody MissoesModel missoesModel) {
+        return missoesService.criarMissao(missoesModel);
     }
 
     //listar missão por id
    @GetMapping("/listarMissaoPorId")
-    public String listarMissaoPorId() {
-        return "Mostrando Missão por ID";
+    public MissoesModel listarMissaoPorId(@RequestParam Long id) {
+        return missoesService.ListarMissaoPorid(id);
     }
 
     // listar todas as missões

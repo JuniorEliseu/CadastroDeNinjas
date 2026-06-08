@@ -1,6 +1,7 @@
 package dev.jotta.CadastroDeNinjas.ninjas;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,17 +9,17 @@ import java.util.Optional;
 @Service
 public class NinjaService {
 
- // injeção de dependência, da acesso ao repository para o service, para o service acessar o banco de dados, e o controller acessar o service
+    // injeção de dependência, da acesso ao repository para o service, para o service acessar o banco de dados, e o controller acessar o service
 
     private NinjaRepository ninjaRepository;
 
     // construtor para injetar a dependência do repository
-    public NinjaService(NinjaRepository ninjaRepository){
+    public NinjaService(NinjaRepository ninjaRepository) {
         this.ninjaRepository = ninjaRepository;
     }
 
     //listar todos os ninjas
-    public List<NinjaModel> listarNinjas(){
+    public List<NinjaModel> listarNinjas() {
         return ninjaRepository.findAll();
     }
 
@@ -33,7 +34,8 @@ public class NinjaService {
         return ninjaRepository.save(ninja);
     }
 
-    public void deletarNinja(Long id) {
+    //deletarninja por ID
+    public void deletarNinjaPorId(Long id) {
         ninjaRepository.deleteById(id);
     }
 }
