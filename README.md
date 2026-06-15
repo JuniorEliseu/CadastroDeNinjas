@@ -80,7 +80,7 @@ Este projeto está sendo desenvolvido como laboratório de aprendizado prático 
 - [x] Cadastro de ninjas
 - [x] Listagem de ninjas
 - [ ] Atualização de ninja
-- [ ] Exclusão de ninja
+- [x] Exclusão de ninja
 
 ---
 ##  Missões
